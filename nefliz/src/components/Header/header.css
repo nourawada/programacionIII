@@ -1,0 +1,16 @@
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    background-color: black;
+    text-transform: uppercase;
+    padding: 15px;
+
+    border: solid 3px rgb(0, 255, 191);
+    text-decoration: none;
+    color: blanchedalmond;
+}
