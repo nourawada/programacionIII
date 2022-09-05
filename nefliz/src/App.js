@@ -22,7 +22,7 @@ function App() {
       <Route path='/' exact={true} component={Home}/>
       <Route path='/detail/movies/id/:id' component={DetailMovie}/>
       <Route path='/detail/peliculas/id/:id' component={DetailMovie}/>
-      <Route path='/series/vertodas' exact={true} component={VerTodas}/>
+      <Route path='/movies/vertodas' exact={true} component={VerTodas}/>
       <Route path='/peliculas/vertodap' exact={true} component={VerTodap}/>
       </Switch> 
       </main>
