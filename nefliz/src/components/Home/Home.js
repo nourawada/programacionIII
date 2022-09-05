@@ -35,11 +35,11 @@ class Home extends Component{
         return(
             <React.Fragment>
             <main className='main'>
-            <h1>Peliculas</h1>
+            <h1 className='peliculasname'>Peliculas</h1>
             <section className='cardContainer'>
                 {this.state.movies.map((oneMovie, idx) => <List key={oneMovie.name + idx}  datosMovie={oneMovie} ></List>)}
             </section>
-            <h1>Peliculas Top Rated</h1>
+            <h1 className='peliculasname'>Peliculas Top Rated</h1>
             <section>
             {this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.name + idx}  datosPelicula={unaPelicula}></ListDos>)}
             </section>
