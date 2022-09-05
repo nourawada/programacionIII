@@ -17,6 +17,7 @@ class List extends Component{
                 </Link>
                 <h2>{this.props.datosSerie.original_name}</h2>
                 <p>{this.props.datosSerie.overview}</p>
+                
             </article>
         )
     }
