@@ -1,9 +1,14 @@
 .menu{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     list-style: none;
     background-color:rgb(45, 45, 125);
+
+}
+.logo {
+    width: 5%;
+    height: auto;
 }
 
 .menu li {
