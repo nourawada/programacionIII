@@ -8,7 +8,7 @@ class Home extends Component{
     constructor(){
         super()
         this.state = {
-            series: [],
+            movies: [],
             peliculas: [],
 
         }
@@ -17,7 +17,7 @@ class Home extends Component{
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=b8041f10f73b7178ac9637ccbb409920`)
         .then(res => res.json())          
         .then(data => this.setState({
-            series:data.results,
+            movies:data.results,
 
         }))
         .catch()
@@ -37,7 +37,7 @@ class Home extends Component{
             <main className='main'>
             <h1>Peliculas</h1>
             <section className='cardContainer'>
-                {this.state.series.map((unaSerie, idx) => <List key={unaSerie.name + idx} datosSerie={unaSerie} ></List>)}
+                {this.state.movies.map((oneMovie, idx) => <List key={oneMovie.name + idx}  datosMovie={oneMovie} ></List>)}
             </section>
             <h1>Peliculas Top Rated</h1>
             <section>
