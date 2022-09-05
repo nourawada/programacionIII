@@ -5,6 +5,8 @@ import Footer from "./components/Footer/Footer";
 import {Route, Switch} from 'react-router-dom';
 import Home from "./components/Home/Home";
 import DetailMovie from "./screens/DetailMovie/DetailMovie";
+import VerTodas from "./screens/VerTodas/VerTodas";
+import VerTodap from "./screens/VerTodap/VerTodap";
 
 
 
@@ -20,6 +22,8 @@ function App() {
       <Route path='/' exact={true} component={Home}/>
       <Route path='/detail/movies/id/:id' component={DetailMovie}/>
       <Route path='/detail/peliculas/id/:id' component={DetailMovie}/>
+      <Route path='/series/vertodas' exact={true} component={VerTodas}/>
+      <Route path='/peliculas/vertodap' exact={true} component={VerTodap}/>
       </Switch> 
       </main>
       <Footer/>
