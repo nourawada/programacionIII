@@ -3,6 +3,7 @@ import List from '../List/List';
 import ListDos from '../ListDos/ListDos';
 import "./home.css"
 
+
 class Home extends Component{
     constructor(){
         super()
@@ -13,7 +14,7 @@ class Home extends Component{
         }
     }
     componentDidMount(){
-        fetch(`https://api.themoviedb.org/3/tv/popular?api_key=b8041f10f73b7178ac9637ccbb409920`)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=b8041f10f73b7178ac9637ccbb409920`)
         .then(res => res.json())          
         .then(data => this.setState({
             series:data.results,
@@ -33,12 +34,12 @@ class Home extends Component{
     render(){
         return(
             <React.Fragment>
-            <main>
-            <h1>Series</h1>
+            <main className='main'>
+            <h1>Peliculas</h1>
             <section className='cardContainer'>
                 {this.state.series.map((unaSerie, idx) => <List key={unaSerie.name + idx} datosSerie={unaSerie} ></List>)}
             </section>
-            <h1>Peliculas</h1>
+            <h1>Peliculas Top Rated</h1>
             <section>
             {this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.name + idx}  datosPelicula={unaPelicula}></ListDos>)}
             </section>
