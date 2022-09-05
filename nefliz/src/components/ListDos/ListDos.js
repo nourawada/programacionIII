@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from "react-router-dom"
+import "./listdos.css"
 
 class ListDos extends Component{
     constructor(props){
@@ -10,7 +11,7 @@ class ListDos extends Component{
     }
     render(){
         return(
-            <article className='list-card'>
+            <article className='character-card'>
                 <Link to={`/detail/peliculas/id/${this.props.datosPelicula.id}`}>
                 <img src= {`https://image.tmdb.org/t/p/w342/${this.props.datosPelicula.poster_path}`} alt=""/>
                 </Link>

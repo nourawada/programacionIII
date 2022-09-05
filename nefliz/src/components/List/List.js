@@ -12,7 +12,7 @@ class List extends Component{
     render(){
         return(
             <article className='character-card'>
-                <Link to={`/detail/series/id/${this.props.datosSerie.id}`}>
+                <Link to={`/detail/movies/id/${this.props.datosSerie.id}`}>
                 <img src= {`https://image.tmdb.org/t/p/w342/${this.props.datosSerie.poster_path}`} alt=""/>
                 </Link>
                 <h2>{this.props.datosSerie.original_name}</h2>
