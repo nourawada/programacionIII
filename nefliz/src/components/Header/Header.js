@@ -8,7 +8,7 @@ return(
    <nav className="navBar">
     
     <ul className="menu">
-    <Link to='/' exact={true} >
+    <Link to='/' exact="true" >
     <img className="logo" src="/img/logo.jpeg" /></Link>
         <Link to='/' exact={true} ><li>Home</li> </Link>
         <Link to='/movies/vertodas'><li>Peliculas Populares</li></Link>

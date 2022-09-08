@@ -10,7 +10,7 @@ class Home extends Component{
         this.state = {
             movies: [],
             peliculas: [],
-
+            peliculasFiltradas: []
         }
     }
     componentDidMount(){
@@ -18,17 +18,22 @@ class Home extends Component{
         .then(res => res.json())          
         .then(data => this.setState({
             movies:data.results,
+            moviesBackup: data.results
 
         }))
         .catch()
-
         fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=b8041f10f73b7178ac9637ccbb409920`)
         .then(res => res.json())          
         .then(data => this.setState({
             peliculas:data.results,
+            
 
         }))
         .catch()
+// Funcion que con un filter agarra el array que vos tenes arriba y guarda lo que vos buscas(el texto que te pasa el usuario)
+
+
+
 
     }
     render(){
