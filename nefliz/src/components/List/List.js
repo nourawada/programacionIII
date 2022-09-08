@@ -15,7 +15,7 @@ class List extends Component{
                 <Link to={`/detail/movies/id/${this.props.datosMovie.id}`}>
                 <img src= {`https://image.tmdb.org/t/p/w342/${this.props.datosMovie.poster_path}`} alt=""/>
                 </Link>
-                <h2>{this.props.datosMovie.original_name}</h2>
+                <h2>{this.props.datosMovie.original_title}</h2>
                 <p>{this.props.datosMovie.overview}</p>
             </article>
         )

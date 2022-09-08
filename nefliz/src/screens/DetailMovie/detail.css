@@ -1,0 +1,7 @@
+.articlemovies{
+    display: flex;
+    
+}
+.articlemovies img{
+    width: 300px;
+}

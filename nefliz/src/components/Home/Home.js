@@ -40,7 +40,7 @@ class Home extends Component{
                 {this.state.movies.map((oneMovie, idx) => <List key={oneMovie.name + idx}  datosMovie={oneMovie} ></List>)}
             </section>
             <h1 className='peliculasname'>Peliculas Top Rated</h1>
-            <section>
+            <section className='cardContainer'>
             {this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.name + idx}  datosPelicula={unaPelicula}></ListDos>)}
             </section>
             </main>

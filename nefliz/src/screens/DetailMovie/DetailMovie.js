@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "./detail.css"
 
 
 class DetailMovie extends Component{  
@@ -26,11 +27,12 @@ class DetailMovie extends Component{
                 {
                     this.state.peliculas === ""?
                     <h4>Cargando</h4>:
-                    <article>
+                    <article className='articlemovies'>
                         <img src={`https://image.tmdb.org/t/p/w342/${this.state.peliculas.poster_path}`} alt=""/>
                         <div>
                             <h2> {this.state.peliculas.title}</h2>
                             <div>
+                            <p>Descripcion: {this.state.peliculas.overview}</p>
                                 <p>Fecha de estreno: {this.state.peliculas.release_date}</p>
                                 <p>Rating: {this.state.peliculas.vote_average}</p>
                                 <p>Duracion: {this.state.peliculas.runtime} min</p>
