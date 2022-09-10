@@ -44,8 +44,9 @@ class VerTodap extends Component{
             <React.Fragment>
             <main>
             <button type='button' onClick={ ()=> this.cargarMass()}> Cargar Más </button>
-            <section>
+            
             <h1>Peliculas</h1>
+            <section className='card-container'>
             {this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.name + idx}  datosPelicula={unaPelicula}></ListDos>)}
             </section>
             </main>

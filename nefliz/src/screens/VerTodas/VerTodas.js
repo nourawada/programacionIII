@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import List from '../../components/List/List'
 import Form from "../Form/Form"
+import './VerTodas.css'
 
 
 
