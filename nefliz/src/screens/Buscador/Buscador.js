@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 
-class Form extends Component{
-constructor(props){
-    super(props);
+class Buscador extends Component{
+constructor(){
+    super();
     this.state= {
         value: '',
     };
@@ -13,18 +13,16 @@ constructor(props){
     controlarCambios(event) {
         this.setState({
             value: event.target.value
-        }, () => this.props.filtrarMovies(this.state.value) );
-        
+        }, () => this.props.filtrarMovies(this.state.value) );}
 
-    };
     render() {
-        console.log(this.state)
+        
         return(
             <form onSubmit={(event)=> this.evitarSubmit(event)}>
-            <input type='text' onChange={ (event)=> this.controlarCambios(event)} placeholder="Buscar Pelicula" name="usuario" value={this.state.value}  />
+            <input type='text'  onChange={ (event)=> this.controlarCambios(event)} placeholder="Buscar Pelicula" name="usuario" value={this.state.value}  />
             </form>
         )
     }
 }
 
-export default Form;
+export default Buscador;
