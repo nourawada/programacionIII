@@ -44,8 +44,6 @@ class VerTodas extends Component{
 
     
     filtrarMovies(Fil) { 
-           
-        //let filtrarMovies = this.state.movies.filter( movies => movies.title.include('Fall'))
         let filtrarMovies = this.state.movies.filter( oneMovie => oneMovie.title.toLowerCase().includes(Fil.toLowerCase()))
         this.setState({
             movies2: filtrarMovies,
