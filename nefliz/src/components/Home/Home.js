@@ -16,12 +16,14 @@ class Home extends Component{
     componentDidMount(){
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=b8041f10f73b7178ac9637ccbb409920`)
         .then(res => res.json())          
-        .then(data => this.setState({
+        .then(data => {
+            console.log(data);
+            this.setState({
             movies:data.results,
             moviesBackup: data.results
-
-        }))
-        .catch()
+        })
+    })
+        .catch(e=>console.log(e))
         fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=b8041f10f73b7178ac9637ccbb409920`)
         .then(res => res.json())          
         .then(data => this.setState({
@@ -29,7 +31,7 @@ class Home extends Component{
             
 
         }))
-        .catch()
+        .catch(e=>console.log(e))
 // Funcion que con un filter agarra el array que vos tenes arriba y guarda lo que vos buscas(el texto que te pasa el usuario)
 
 
@@ -42,11 +44,11 @@ class Home extends Component{
             <main className='main'>
             <h1 className='peliculasname'>Peliculas</h1>
             <section className='cardContainer'>
-                {this.state.movies.map((oneMovie, idx) => <List key={oneMovie.name + idx}  datosMovie={oneMovie} ></List>)}
+                {this.state.movies.map((oneMovie, idx) => <List key={oneMovie.title + idx}  datosMovie={oneMovie} ></List>)}
             </section>
             <h1 className='peliculasname'>Peliculas Top Rated</h1>
             <section className='cardContainer'>
-            {this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.name + idx}  datosPelicula={unaPelicula}></ListDos>)}
+            {this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.title + idx}  datosPelicula={unaPelicula}></ListDos>)}
             </section>
             </main>
             </React.Fragment>

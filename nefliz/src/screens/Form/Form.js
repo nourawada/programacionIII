@@ -13,7 +13,7 @@ constructor(props){
     controlarCambios(event) {
         this.setState({
             value: event.target.value
-        }, () => this.props.filtrarPelis(this.state.value) );
+        }, () => this.props.filtrarMovies(this.state.value) );
         
 
     };
@@ -21,7 +21,7 @@ constructor(props){
         console.log(this.state)
         return(
             <form onSubmit={(event)=> this.evitarSubmit(event)}>
-            <input type='text' onChange={ (event)=> this.controlarCambios(event)} value={this.state.value}  />
+            <input type='text' onChange={ (event)=> this.controlarCambios(event)} name="usuario" value={this.state.value}  />
             </form>
         )
     }
