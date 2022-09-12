@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import DetailMovie from "./screens/DetailMovie/DetailMovie";
 import VerTodas from "./screens/VerTodas/VerTodas";
 import VerTodap from "./screens/VerTodap/VerTodap";
+import Favoritos from "./screens/Favoritos/Favoritos";
 
 
 
@@ -24,6 +25,9 @@ function App() {
       <Route path='/detail/peliculas/id/:id' component={DetailMovie}/>
       <Route path='/movies/vertodas' exact={true} component={VerTodas}/>
       <Route path='/peliculas/vertodap' exact={true} component={VerTodap}/>
+      <Route path='/favoritos' exact={true} component={Favoritos}/>
+     
+
       </Switch> 
       </main>
       <Footer/>

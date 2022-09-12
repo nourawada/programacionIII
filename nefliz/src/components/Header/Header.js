@@ -13,7 +13,7 @@ return(
         <Link to='/' exact={true} ><li>Home</li> </Link>
         <Link to='/movies/vertodas'><li>Peliculas Populares</li></Link>
         <Link to='/peliculas/vertodap'><li> Pelicualas más vistas</li></Link>
-        <Link to='/favortos'><li>Favoritos</li></Link>
+        <Link to='/favoritos' ><li>Favoritos</li></Link>
     </ul>
    </nav>
     
