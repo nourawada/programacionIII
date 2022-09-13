@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ListDos from '../../components/ListDos/ListDos';
 import Form  from "../Form/Form"
+import './VerTodap.css'
 
 
 class VerTodap extends Component{
@@ -57,7 +58,7 @@ class VerTodap extends Component{
             <Form filtrarMovies={(Fil) => this.filtrarMovies(Fil)}></Form>
             <button type='button' onClick={ ()=> this.cargarMass()}> Cargar Más </button>
             </div>
-            <h1>Peliculas</h1>
+            <h1 className='peliculastitle'>Peliculas</h1>
             <section className='card-container'>
             {this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.title + idx}  datosPelicula={unaPelicula}></ListDos>)}
             </section>
