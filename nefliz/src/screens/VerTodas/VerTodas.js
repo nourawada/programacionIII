@@ -59,7 +59,7 @@ class VerTodas extends Component{
            <Form filtrarMovies={(Fil)=>this.filtrarMovies(Fil)}></Form>
             <button className='cargar' type="button" onClick={ ()=>this.cargarMas()}>Cargar más </button>
            </div> 
-            <h1>Peliculas</h1>
+            <h1 className='peliculastitle'>Peliculas</h1>
             <section className='card-container'>
             {this.state.movies2 === 0 ? <h1>Cargando...</h1> : this.state.movies2.map((oneMovie, idx) => <List key={oneMovie.title + idx}  datosMovie={oneMovie} />)}
             </section>
