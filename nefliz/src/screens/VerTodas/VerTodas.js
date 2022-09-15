@@ -61,7 +61,7 @@ class VerTodas extends Component{
            </div> 
             <h1>Peliculas</h1>
             <section className='card-container'>
-                {this.state.movies2.map((oneMovie, idx) => <List key={oneMovie.title + idx}  datosMovie={oneMovie} />)}
+            {this.state.movies2 === 0 ? <h1>Cargando...</h1> : this.state.movies2.map((oneMovie, idx) => <List key={oneMovie.title + idx}  datosMovie={oneMovie} />)}
             </section>
             </main>
             </React.Fragment>

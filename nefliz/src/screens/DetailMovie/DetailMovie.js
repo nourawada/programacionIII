@@ -26,7 +26,7 @@ class DetailMovie extends Component{
             <React.Fragment>
                 {
                     this.state.peliculas === ""?
-                    <h4>Cargando</h4>:
+                    <h4>Cargando...</h4>:
                     <article className='articlemovies'>
                         <img src={`https://image.tmdb.org/t/p/w342/${this.state.peliculas.poster_path}`} alt=""/>
                         <div>

@@ -59,7 +59,7 @@ class VerTodap extends Component{
             </div>
             <h1>Peliculas</h1>
             <section className='card-container'>
-            {this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.title + idx}  datosPelicula={unaPelicula}></ListDos>)}
+            {this.state.peliculas === 0 ? <h1>Cargando...</h1> : this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.title + idx}  datosPelicula={unaPelicula}></ListDos>)}
             </section>
             </main>
             </React.Fragment>

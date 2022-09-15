@@ -80,11 +80,12 @@ class Home extends Component{
             
             <h1 className='peliculasname'>Peliculas</h1>
             <section className='cardContainer'>
-                {this.state.movies.map((oneMovie, idx) => <List datosMovie={oneMovie} key={oneMovie.title + idx}   ></List>)}
+            {this.state.movies === 0 ? <h1>Cargando...</h1> : this.state.movies.map((oneMovie, idx) => <List datosMovie={oneMovie} key={oneMovie.title + idx}   ></List>)}
             </section>
             <h1 className='peliculasname'>Peliculas Top Rated</h1>
             <section className='cardContainer'>
-            {this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.title + idx}  datosPelicula={unaPelicula}></ListDos>)}
+
+            {this.state.peliculas === 0 ? <h1>Cargando...</h1> : this.state.peliculas.map((unaPelicula, idx) => <ListDos key={unaPelicula.title + idx}  datosPelicula={unaPelicula}></ListDos>)}
             </section>
             </main>
 
