@@ -1,22 +1,29 @@
-.menu{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    background-color:rgb(45, 45, 125);
+.comp-nav {
+    padding: 0 10px;
+    width: 10%;
+    padding-top: 30px;
+    text-decoration: none;
+    color: whitesmoke;
+  
 
+}
+.navegador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bolder;
+    max-height: 100%;
+    list-style: none;
+   background-color: rgb(4 12 38);
+
+}
+.navegador a:hover {
+    color: black;
 }
 .logo {
-    width: 5%;
-    height: auto;
-}
-
-.menu li {
-    background-color: black;
-    text-transform: uppercase;
-    padding: 15px;
-
-    border: solid 3px rgb(45, 45, 125);
-    text-decoration: none;
-    color: blanchedalmond;
+    width: 70px;
+    padding-top: 20px;
+    border-radius: 50%;
+    padding-bottom: 20px;
 }

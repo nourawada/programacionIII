@@ -1,5 +1,6 @@
 .body{
-    background-image: url(../../public/img/foto.jpeg);
+    background-image: url(../../public/img/fondo1.jpeg);
+    -webkit-background-composite: inherit;
 }
 p{
     color:whitesmoke;

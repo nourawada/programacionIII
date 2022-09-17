@@ -23,7 +23,6 @@ class Home extends Component{
             console.log(data);
             this.setState({
             movies:data.results,
-            moviesBackup: data.results
         })
     })
         .catch(e=>console.log(e))
@@ -46,21 +45,19 @@ class Home extends Component{
 
 
     controlarCambios(e) {
-        this.setState({value: e.target.value}, () => {{}
+        this.setState({value: e.target.value}, () => {
         console.log(this.state.value)
         this.busqueda()})};
 
     busqueda () {
-        if(this.state.value !== ''){ {/*esto es porque cuando borraba y ecribia se me salia y entonces si el input esta vacio no hago el fetch */}
-        
+         //*esto es porque cuando borraba y ecribia se me salia y entonces si el input esta vacio no hago el fetch */}
+        if(this.state.value !== ''){ 
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=b8041f10f73b7178ac9637ccbb409920&language=en-US&page=1&query=${this.state.value}`)
         .then(res => res.json())
         .then(data => {
         this.setState({data: data.results}, () => console.log(data.results))
             })
         .catch(e => console.log(e))}}
-
-
 
 
 
@@ -99,7 +96,7 @@ class Home extends Component{
 </React.Fragment>
         )
     }
+}
 
     //formulario de busqueda
-}
 export default Home

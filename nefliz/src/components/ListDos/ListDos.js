@@ -6,6 +6,8 @@ class ListDos extends Component{
     constructor(props){
         super(props)
         this.state={
+            descripcion:"ocultar",
+            texto:"ver descripcion",
             favMensajito : 'Agregar a Favoritos',
 
 
@@ -25,7 +27,18 @@ class ListDos extends Component{
             })
             
         }
-
+    
+    }
+    descripcion (){
+        if(this.state.descripcion === 'ocultar'){
+            this.setState({
+                descripcion: 'mostrar', texto:'ocultar descripcion'
+            })
+        }else{
+            this.setState({
+                descripcion: 'ocultar', texto: 'ver descripcion'
+            })
+        }
     }
     agregaryQuitarDeFavs(id){
         //esta funcion tiene que agregar un id dentro de un array y guardarlo en localStorage 
@@ -74,7 +87,11 @@ class ListDos extends Component{
                 <img src= {`https://image.tmdb.org/t/p/w342/${this.props.datosPelicula.poster_path}`} alt=""/>
                 </Link>
                 <h2>{this.props.datosPelicula.original_title}</h2>
-                <p>{this.props.datosPelicula.overview}</p>
+
+                <div className='description'>
+                <p onClick={()=> this.descripcion()} className='card'>{this.state.texto}</p>
+                <p className={this.state.descripcion} onClick={this.state.descripcion}>{this.props.datosPelicula.overview}</p>
+            </div>
             </article>
         )
     }
