@@ -9,3 +9,13 @@
     margin-bottom: 20px;
     
 }
+@media (min-width:720px) {
+    .div2{
+        width: 35%;
+    }
+}
+@media (min-width:820px) {
+    .div2{
+        width: 20%;
+    }
+}

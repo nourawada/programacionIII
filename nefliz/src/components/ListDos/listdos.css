@@ -22,3 +22,20 @@ box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
 .character-card h2 {
     margin: 2px 0;
 } 
+.ocultar{
+    display: none
+}
+
+.mostrar{
+    display: block;
+}
+@media (min-width:720px) {
+    .character-card h2 {
+        font-size: 25px;
+    } 
+}
+@media (min-width:820px) {
+    .character-card h2 {
+        font-size: 35px;
+    } 
+}

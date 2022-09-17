@@ -32,3 +32,38 @@
     position: relative;
     left: 20%;
 }
+
+@media (min-width:720px) {
+    .logo{
+        width:70px;
+    }
+    .comp-nav {
+        font-size: 14px;
+        position: relative;
+        right: 5%;
+    
+    }
+    .lista2{
+        position: relative;
+        left: 60%;
+    }
+
+}
+@media (min-width:820px) {
+    .logo{
+        width:80px;
+        position: relative;
+        left:10%;
+    }
+    .comp-nav {
+        font-size: 22px;
+        position: relative;
+        right: 5%;
+    
+    }
+    .lista2{
+        position: relative;
+        left: 60%;
+    }
+}
+
