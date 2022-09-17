@@ -28,7 +28,9 @@ class DetailMovie extends Component{
                     this.state.peliculas === ""?
                     <h4>Cargando...</h4>:
                     <article className='articlemovies'>
-                        <img src={`https://image.tmdb.org/t/p/w342/${this.state.peliculas.poster_path}`} alt=""/>
+                
+                        <img className='div2' src={`https://image.tmdb.org/t/p/w342/${this.state.peliculas.poster_path}`} alt=""/>
+                        
                         <div>
                             <h2> {this.state.peliculas.title}</h2>
                             <div>

@@ -1,7 +1,11 @@
-.articlemovies{
-    display: flex;
-    
-}
 .articlemovies img{
-    width: 300px;
+   display: block;
+   
+
+}
+.div2{
+    width: 50%;
+    margin:0 auto;
+    margin-bottom: 20px;
+    
 }

@@ -1,6 +1,7 @@
+
 .body{
     background-image: url(../../public/img/fondo1.jpeg);
-    -webkit-background-composite: inherit;
+    overflow: auto;
 }
 p{
     color:whitesmoke;
