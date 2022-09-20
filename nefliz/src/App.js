@@ -8,8 +8,7 @@ import DetailMovie from "./screens/DetailMovie/DetailMovie";
 import VerTodas from "./screens/VerTodas/VerTodas";
 import VerTodap from "./screens/VerTodap/VerTodap";
 import Favoritos from "./screens/Favoritos/Favoritos";
-
-
+import NotFound from "./screens/NotFound/NotFound";
 
 
 function App() {
@@ -26,6 +25,7 @@ function App() {
       <Route path='/movies/vertodas' exact={true} component={VerTodas}/>
       <Route path='/peliculas/vertodap' exact={true} component={VerTodap}/>
       <Route path='/favoritos' exact={true} component={Favoritos}/>
+      <Route path= "" component={NotFound}/>
      
 
       </Switch> 
